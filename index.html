@@ -1,0 +1,94 @@
+<html>
+
+    <head>
+
+        <title>pokefy</title>
+
+        <!-- metas -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- lib -->
+
+        <!-- res -->
+        <!-- json -->
+        <script type="application/javascript" src="res/json/pokemons-json.js"></script>
+        <script type="application/javascript" src="res/json/versions-json.js"></script>
+
+        <!-- src -->        
+        <!-- components -->
+        <script type="application/javascript" src="src/components/filter/filter.js"></script>
+        <link rel="stylesheet" href="src/components/filter/filter.css">
+        <script type="application/javascript" src="src/components/pokemon/pokemon.js"></script>
+        <link rel="stylesheet" href="src/components/pokemon/pokemon.css">
+        <!-- scripts -->
+        <script type="application/javascript" src="src/scripts/download.js"></script>
+        <!-- styles -->
+        <link rel="stylesheet" href="src/styles/pokemons.css">
+        <link rel="stylesheet" href="src/styles/type.css">
+        <link rel="stylesheet" href="src/styles/version.css">
+
+        <!-- index -->
+        <link rel="stylesheet" href="index.css">
+        <script type="application/javascript" src="index.js"></script>    
+
+    </head>
+
+    <body>
+
+        <form class="filter">
+            <div>
+                <label for="name">NAME</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="from">FROM Nº</label>
+                <input type="number" name="from" id="from" min="1" max="898" step="1" value="1">
+            </div>
+            <div>
+                <label for="to">TO Nº</label>
+                <input type="number" name="to" id="to" min="1" max="898" step="1" value="898">
+            </div>
+            <div>
+                <label for="min">MIN CATCH LEVEL</label>
+                <input type="number" name="min" id="min" min="1" max="100" step="1" value="1">
+            </div>
+            <div>
+                <label for="max">MAX CATCH LEVEL</label>
+                <input type="number" name="max" id="max" min="1" max="100" step="1" value="100">
+            </div>
+            <div>
+                <label for="versions">VERSIONS</label>
+                <input type="text" name="versions" id="versions">
+            </div>
+            <div>
+                <label for="types">TYPES</label>
+                <input type="text" name="types" id="types">
+            </div>
+            <div>
+                <label>OPTIONS</label>
+                <input type="checkbox" name="obtainable" id="obtainable" style="float: left;">
+                <label for="obtainable" style="float: left;">OBTAINABLE</label>
+            </div>
+            <div>
+                <button id="fold" type="button">FOLD ALL</button>
+            </div>
+            <div>
+                <button id="unfold" type="button">UNFOLD ALL</button>
+            </div>   
+            <div>
+                <button id="unpin" type="button">UNPIN ALL</button>
+            </div>  
+            <div>
+                <button id="reset" type="button">RESET</button>
+            </div>     
+        </form>
+
+        <div class="pokemons" id="pinned"></div>
+
+        <div class="pokemons" id="unpinned"></div>
+
+    </body>
+
+</html>

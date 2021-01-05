@@ -1,0 +1,213 @@
+div.pokemons {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 16px;
+}
+
+div.pokemons:empty {
+    display: none;
+}
+
+div.pokemon {
+    padding: 16px;
+    background-color: #1E1E1E;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px;
+}
+
+div.pokemon[data-visible="false"] {
+    display: none;
+}
+
+div.pokemon[data-pinned="true"] {
+    border: 1px solid dodgerblue;
+    box-shadow: 0px 0px 5px dodgerblue;    
+}
+
+div.pokemon > div:first-child {
+    height: 64px;
+}
+
+div.pokemon > div:first-child > div:first-child {
+    float: left;
+    width: 64px;
+    height: 64px;
+}
+
+div.pokemon > div:first-child > div:last-child {
+    float: left;
+    height: 64px;
+    margin-left: 16px;
+    border-left: 1px solid #2E2E2E;
+    padding-left: 16px;    
+    width: calc(100% - 64px - 16px - 1px - 16px);
+}
+
+div.pokemon > div:first-child > div:first-child > img {
+    width: 64px;
+    height: 64px;
+    object-fit: scale-down;
+}
+
+div.pokemon > div:first-child > div:last-child a {
+    text-decoration: none;
+}
+
+div.pokemon > div:first-child > div:last-child a:hover {
+	text-decoration: underline;
+}
+
+div.pokemon img.pin {
+    width: 26px; 
+    height: 26px;
+    opacity: 0.1;    
+}
+
+div.pokemon img.pin:hover {
+    cursor: pointer;
+}
+
+div.pokemon[data-pinned="false"] img.pin:hover {
+    opacity: 0.5;    
+}
+
+div.pokemon[data-pinned="true"] img.pin:hover {
+    opacity: 1.0;
+}
+
+div.pokemon[data-pinned="false"] img.pin {
+    filter: grayscale(100%);
+}
+
+div.pokemon[data-pinned="true"] img.pin {
+    opacity: 1.0;
+    filter: drop-shadow(0px 0px 4px dodgerblue);
+}
+
+div.pokemon table.stats {
+    width: 100%;
+    font-weight: bold;
+    font-family: 'Candara';
+    font-size: 12px;
+}
+
+div.pokemon table.stats > tbody > tr > td:nth-child(1),
+div.pokemon table.stats > tbody > tr > td:nth-child(2) {
+    text-align: right;
+}
+
+div.pokemon table.stats > tbody > tr > td > span.hud {
+    display: inline-block;
+    height: 8px;
+    border-radius: 5px;
+    margin: 0px 8px;
+}
+
+div.pokemon > hr {
+    padding: 0;
+	margin: 16px 0px;
+	border: 1px solid #2E2E2E;
+	border-top-width: 0px;
+}
+
+div.pokemon ul {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+div.pokemon li {
+    list-style-type: none;
+}
+
+div.pokemon li.version {
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #0E0E0E;
+}
+
+div.pokemon li.version:last-child {
+    margin-bottom: 0px;
+}
+
+div.pokemon li.version > span {
+    display: inline-block;
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: #0E0E0E;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Candara';
+    font-weight: bold;
+}
+
+div.pokemon li.version > span:hover {
+    background-color: #151515;
+}
+
+div.pokemon li.version[data-fold="true"] > span {
+    border-radius: 9px;
+}
+
+div.pokemon li.version > span:after {
+    float: right;
+    color: lightgray;
+}
+
+div.pokemon li.version[data-fold="true"] > span:after {
+    content: "▼";
+}
+div.pokemon li.version[data-fold="false"] > span:after {
+    content: "▲";
+}
+
+div.pokemon li.version[data-fold="true"] > ul {
+    display: none;
+}
+
+div.pokemon li.version > ul > li {
+    padding: 8px;
+    border-top: 1px solid #0E0E0E;
+}
+
+div.pokemon li.version > ul > li {
+    font-family: 'Candara';
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.pokemon li.version > ul > li:last-child {
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+div.pokemon li.version > ul > li:hover {
+    background-color: #2E2E2E;
+}
+
+div.pokemon li.version > ul > li > span > a {
+    text-decoration: none;
+}
+
+div.pokemon li.version > ul > li > span > a:hover {
+    text-decoration: underline;
+}
+
+div.pokemon li.version > ul > li > div {
+    text-align: right;
+    float: right;
+}
+
+div.pokemon li.version > ul > li > div > span.separator {
+    border-left: 1px solid #3E3E3E;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+div.pokemon li.version img {
+    padding: 0px;
+    margin: 0px 0px 0px 2px;
+    vertical-align: top;
+}
