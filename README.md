@@ -1,5 +1,5 @@
 # Pokefy
-A tool to query Pokémon with multiple filters.
+A tool for querying Pokémon with multiple filters.
 
 All cached data (`pokemons-json.js`) was provided by https://pokeapi.co/
 
