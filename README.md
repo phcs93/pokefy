@@ -16,6 +16,10 @@ https://phcs93.github.io/pokefy/
   * by stats
   * by number of evolutions
   * by egg group
+  * by moves learned
+  * by ability
+  * by weight
+  * by height
 * find a better spritesheet
   * remove `pokemons.css` (calculate the coords with the id)
 * refactor all css and js
