@@ -24,3 +24,9 @@ https://phcs93.github.io/pokefy/
   * remove `pokemons.css` (calculate the coords with the id)
 * refactor all css and js
   * I may actually never do that since this project is only a POC
+* team builder with moves & type vulnerabilites / advantages
+* charts
+  * type number
+  * type effectiveness
+  * natures & tastes
+  * weather time (sword & shield)
