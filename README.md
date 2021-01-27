@@ -1,7 +1,7 @@
 # Pokefy
 A tool for querying Pokémon with multiple filters.
 
-All cached data (`pokemons-json.js`) was provided by https://pokeapi.co/
+All cached data (`pokemons-json.js`) was obtained from https://pokeapi.co/
 
 :warning: Data for Generation 8 is incomplete (encounters missing).
 
